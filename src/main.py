@@ -1,21 +1,19 @@
-# src/main.py
+from anti_afk.anti_afk_manager import AntiAFKManager
 
-from clicker_center_screen import auto_click_center_screen
-# from clicker_confirm_button import auto_click_confirm_button
 
 def main_menu():
+    manager = AntiAFKManager()
     while True:
         print("\nAutoClicker Testing Development Kit")
-        print("1. 3s Auto Clicker Center Screen")
-        print("2. Auto Click Confirm Button")
+        print("1. Anti AFK + Anti Starve")
+        print("2. Anti Starve")
         print("3. Exit")
         choice = input("Enter your choice (1-3): ")
         
         if choice == '1':
-            auto_click_center_screen()
+            manager.start()
         elif choice == '2':
             pass
-            # auto_click_confirm_button()
         elif choice == '3':
             print("Exiting...")
             break
